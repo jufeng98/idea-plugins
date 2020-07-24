@@ -31,7 +31,9 @@
             <add-to-group group-id="MainMenu" anchor="last"/>
             <action id="CustomizePlugin.RedisFrameAction" class="org.javamaster.idea.redis.RedisFrameAction"
                     text="Redis Explorer"
-                    description="Redis explorer"/>
+                    description="Redis explorer">
+                <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt F12"/>
+            </action>
         </group>
     </actions>
 
