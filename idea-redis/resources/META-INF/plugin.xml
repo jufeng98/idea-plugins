@@ -1,0 +1,38 @@
+<idea-plugin>
+
+    <id>org.javamaster.idea.redis</id>
+    <name>Redis Explorer</name>
+    <version>1.0</version>
+    <vendor email="375709770@qq.com" url="http://www.javamaster.org">java master</vendor>
+
+    <description><![CDATA[
+    redis的可视化操作,可以实现单机或者集群redis的各种增删改查等各种操作,支持模糊搜索key等等
+    ]]></description>
+
+    <change-notes><![CDATA[
+      初始版本,实现redis的可视化操作,可以做到单机或者集群redis的各种增删改查等各种操作,支持模糊搜索key等等
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group id="CustomizePlugin.Menu" text="Useful Plugin" description="Useful plugin">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="CustomizePlugin.RedisFrameAction" class="org.javamaster.idea.redis.RedisFrameAction"
+                    text="Redis Explorer"
+                    description="Redis explorer"/>
+        </group>
+    </actions>
+
+</idea-plugin>
